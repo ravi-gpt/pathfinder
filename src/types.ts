@@ -23,9 +23,11 @@ export interface CareerRecommendation {
   }[];
   resources: {
     title: string;
-    type: 'course' | 'article' | 'project' | 'community';
+    type: 'course' | 'article' | 'project' | 'community' | 'search_result';
     link?: string;
     isFree: boolean;
+    searchedSnippet?: string;
+    sourceUrl?: string;
   }[];
   offCampusStrategy: string;
   gapAnalysis: {
@@ -33,6 +35,7 @@ export interface CareerRecommendation {
     industryRequirement: string;
     actionToBridge: string;
   }[];
+  youtubeVideoId?: string;
 }
 
 export type AssessmentStep = 'intro' | 'profile' | 'skills' | 'interests' | 'results';
